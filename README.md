@@ -1,22 +1,19 @@
-ttrss-plugin-feedstatistics
-===========================
+# ttrss-plugin-feedstatistics
 
 Basic feed statistics for Tiny Tiny RSS. 
 
 Adds a statistics pane to the feed preferences tab, including both a Google Reader-style one line summary and a table of statistics per feed.
 
-Notes
------
+## Notes
 
 1) The table is sorted by posts/day. No way to change this in the preferences, but you can easily change it in the SQL query.
 
 2) We do not keep track of actual feed activity, but instead only look at the current database. This has a few implications, e.g. we do not keep lifetime read counts. 
-If you don't have purging enabled, you can still get generate them by modifying the default interval (30 days). 
+If you don't have purging enabled, you can still get generate them by modifying the default interval (since first entry). 
 
 3) The items per day calculation assumes all feeds were followed for the entire interval. If they were recently added, the value will be wrong.
 
-Installation
-------------
+## Installation
 
 1) Upload the feedstatistics directory into [TT-RSS root directory]/plugins.
 
@@ -24,8 +21,7 @@ Installation
 
 3) Enable the plugin by going to Preferences -> Plugins.
 
-Changelog
----------
+## Changelog
 
 v1.00 - Initial Release (2014-07-05)
 
@@ -41,9 +37,18 @@ v1.05 - Fixed bug when purge is disabled (2015-10-05)
 
 v1.06 - Instead of just looking at recently read items, it now looks at marking/publishing dates (2016-01-21)
 
-Links
------
+v1.07 - Added option to set interval and an option to fetch all data (2017-09-13)
+
+## Links
 
 For discussion, please see the following thread in the Tiny Tiny RSS forums.
 
 http://tt-rss.org/forum/viewtopic.php?f=22&t=3069
+
+## License
+
+Copyright 2016 jsoares (https://github.com/jsoares/ttrss-plugin-feedstatistics)
+
+Copyright 2017 dKaulig
+
+Licensed under the GNU Lesser General Public License v3.0.
